@@ -6,15 +6,17 @@ import { useState } from "react";
 
 export default function Package(props) {
   const { name, type, amount, weight, activity, available, comment } = props;
-
+  const enter = "Сказочное заморское яство";
+  const leave = "Котэ не одобряет?";
   const [selected, setSelected] = useState(activity);
-  const [hover, setHover] = useState("Сказочное заморское яство");
+  const [hover, setHover] = useState(enter);
+
   const changeСolorFon = () => {
     return available ? "not-active-color" : "not-available-color ";
   };
 
   const hoverLeave = () => {
-    selected && setHover("Котэ не одобряет?");
+    selected && setHover(leave);
   };
 
   return (
@@ -30,7 +32,7 @@ export default function Package(props) {
         <div
           className="item__blok"
           onMouseLeave={() => hoverLeave()}
-          onMouseEnter={() => setHover("Сказочное заморское яство")}
+          onMouseEnter={() => setHover(enter)}
         >
           <div
             className={
@@ -39,7 +41,14 @@ export default function Package(props) {
                 : "item__text__blok text__not-available-color text-opacity"
             }
           >
-            <p className={"item__titl-description"} id="description-hover">
+            <p
+              className={
+                hover === enter
+                  ? "item__titl-description"
+                  : "item__titl-description-hover"
+              }
+              id="description-hover"
+            >
               {hover}
             </p>
 
