@@ -1,0 +1,148 @@
+@import "../libs/variables.scss";
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("../../assets/trebuc.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.item {
+  margin-bottom: 25px;
+  font-family: $item-font-family;
+}
+
+.item__img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  height: 264px;
+  z-index: 0;
+}
+
+.item__border {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  border-radius: 9px;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+}
+
+.not-available-color {
+  background-color: $bg-not-availible;
+}
+.active-color {
+  background-color: $pink;
+}
+.not-active-color {
+  background-color: $blue;
+}
+.text__not-available-color {
+  color: $not-available;
+}
+
+.item__blok {
+  position: absolute;
+  width: 312px;
+  height: 472px;
+  background-color: $white;
+  border-radius: 7px;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  top: 4px;
+  left: 4px;
+}
+
+.opacity {
+  opacity: 50%;
+}
+.text-opacity {
+  opacity: 30%;
+}
+.item__text__blok {
+  margin-left: 47px;
+}
+.item__titl-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $gray-text;
+  text-align: left;
+  margin-top: 17px;
+}
+.item__titl-description-hover {
+  color: $pink;
+}
+.item__titl {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: left;
+  margin-top: 5px;
+}
+.item__taste {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+}
+.item__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $gray-text;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.item__circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 1;
+  right: 16px;
+  bottom: 16px;
+}
+
+.item__weight {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  color: $white;
+  margin-top: 7px;
+}
+.item__weight-number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  color: $white;
+  margin-top: -7px;
+}
+.item__text-weight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__agitation {
+  color: $white;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.agitation-not-available {
+  color: $agitation-not-available;
+}
+.item__agitation-text,
+.item__buy {
+  color: $blue;
+  text-decoration: underline dashed $blue;
+  background-color: transparent;
+  border: none;
+}
+.css-fix {
+  white-space: pre-wrap;
+}
